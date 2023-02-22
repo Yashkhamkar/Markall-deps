@@ -32,11 +32,15 @@ const Contact = () => {
       Swal.fire({
         icon: "success",
         text: "Message sent successfully",
-      })
+      }),
+      setemail(""),
+      setphone(""),
+      setmessage(""),
+      setname("")
     );
   };
   return (
-    <div>
+<div>
       <div className="contact-rect" id="contact"></div>
       <div className="contact-form-rect">
         <div className="contact-title">
@@ -52,6 +56,7 @@ const Contact = () => {
                 placeholder="*Name"
                 className="input-name"
                 onChange={(e) => setname(e.target.value)}
+                value={name}
                 required
               />
               <div className="input-line"></div>
@@ -59,6 +64,7 @@ const Contact = () => {
                 placeholder="*Email"
                 onChange={(e) => setemail(e.target.value)}
                 className="input-name"
+                value={email}
                 required
               />
               <div className="input-line"></div>
@@ -66,6 +72,7 @@ const Contact = () => {
                 placeholder="*Phone"
                 className="input-name"
                 onChange={(e) => setphone(e.target.value)}
+                value={phone}
                 required
               />
               <div className="input-line"></div>
@@ -73,6 +80,7 @@ const Contact = () => {
                 placeholder="*Message"
                 className="input-name"
                 onChange={(e) => setmessage(e.target.value)}
+                value={message}
                 required
               />
               <div className="input-line"></div>
